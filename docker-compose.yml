@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  mysqldb:
+    image: mysql:8.0
+    container_name: mysqldb
+    environment:
+      MYSQL_ROOT_PASSWORD: Lokesh@2003
+      MYSQL_DATABASE: omify_assignment
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - springboot-network
+
+  app:
+    build: .
+    container_name: springboot-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysqldb
+    environment:
+      DB_URL: jdbc:mysql://mysqldb:3306/omify_assignment
+      DB_USERNAME: root
+      DB_PASSWORD: Lokesh@2003
+    networks:
+      - springboot-network
+
+volumes:
+  mysql_data:
+
+networks:
+  springboot-network:
