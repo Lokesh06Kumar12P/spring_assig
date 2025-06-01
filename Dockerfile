@@ -19,5 +19,4 @@ COPY --from=builder /app/target/Assignment-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
 
 # Run the jar
-ENTRYPOINT ["java", "-jar", "target/Assignment-0.0.1-SNAPSHOT.jar"]
-
+ENTRYPOINT ["java", "-jar", "app.jar"]
