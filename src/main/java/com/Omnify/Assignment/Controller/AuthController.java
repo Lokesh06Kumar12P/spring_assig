@@ -51,5 +51,10 @@ public class AuthController {
         public ResponseEntity<Integer> AddBlog(@RequestBody Blog blog){
             return ResponseEntity.ok(userservice.AddBlog(blog));
         }
+
+    @GetMapping("/")
+    public String healthCheck() {
+        return "OK";
+    }
 }
 
