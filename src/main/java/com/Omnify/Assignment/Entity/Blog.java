@@ -1,9 +1,22 @@
-package com.Omnify.Assignment.Model;
+package com.Omnify.Assignment.Entity;
 
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "blog")
 public class Blog {
+    @Id
+    @Column
     private int id;
+    @Column
     private String title;
+    @Column
     private String subtitle;
+    @Column
     private String content;
 
     public Blog(){}

@@ -1,7 +1,7 @@
 package com.Omnify.Assignment.Service;
 
 import com.Omnify.Assignment.Entity.User;
-import com.Omnify.Assignment.Model.Blog;
+import com.Omnify.Assignment.Entity.Blog;
 import com.Omnify.Assignment.Reposistory.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 @Service
 public class Userservice {

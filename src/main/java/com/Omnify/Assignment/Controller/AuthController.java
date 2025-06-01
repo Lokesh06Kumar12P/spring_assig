@@ -1,7 +1,7 @@
 package com.Omnify.Assignment.Controller;
 
 import com.Omnify.Assignment.Entity.User;
-import com.Omnify.Assignment.Model.Blog;
+import com.Omnify.Assignment.Entity.Blog;
 import com.Omnify.Assignment.Service.Userservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
