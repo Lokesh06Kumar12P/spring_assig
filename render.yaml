@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: assignment-springboot
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: false
+    envVars:
+      - key: DB_URL
+        value: jdbc:mysql://turntable.proxy.rlwy.net:53639/railway
+      - key: SPRING_DATASOURCE_USERNAME
+        value: root
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: wxIbGLALBijPcwUOhioqVdicJueVpWZZ
